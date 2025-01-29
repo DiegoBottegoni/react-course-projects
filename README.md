@@ -17,3 +17,4 @@ Each project has a live demo link and a source code link.
 | 07 | Slider          | [🔗 Live](https://007-slider.netlify.app/)          | [📂 Code](./07-slider/)          |
 | 08 | Lorem Ipsum     | [🔗 Live](https://008-lorem-ipsum.netlify.app/)     | [📂 Code](./08-lorem-ipsum/)     |
 | 09 | Color Generator | [🔗 Live](https://009-color-generator.netlify.app/) | [📂 Code](./09-color-generator/) |
+| 10 | Grocery Bud     | [🔗 Live](https://010-grocery-bud.netlify.app/)     | [📂 Code](./10-grocery-bud/)     |
