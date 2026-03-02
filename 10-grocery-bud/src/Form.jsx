@@ -32,7 +32,7 @@ const Form = ({ addItem, editId, items, updateItem }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h4>grocery bud</h4>
+      <h4>My List</h4>
       <div className="form-control">
         <input
           type="text"
