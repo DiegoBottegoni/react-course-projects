@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
-const Form = ({ addItem }) => {
+const Form = ({ addItem, editId, items, updateItem }) => {
   const [newItemName, setNewItemName] = useState("");
+
+  useEffect(() => {
+    if (editId) {
+      const specificItem = items.find((item) => item.id === editId);
+      if (specificItem) {
+        setNewItemName(specificItem.name);
+      }
+    } else {
+      setNewItemName("");
+    }
+  }, [editId, items]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,7 +22,11 @@ const Form = ({ addItem }) => {
       toast.error("please provide something");
       return;
     }
-    addItem(newItemName);
+    if (editId) {
+      updateItem(newItemName);
+    } else {
+      addItem(newItemName);
+    }
     setNewItemName("");
   };
 
@@ -26,7 +41,7 @@ const Form = ({ addItem }) => {
           onChange={(event) => setNewItemName(event.target.value)}
         />
         <button type="submit" className="btn">
-          add item
+          {editId ? "edit" : "add item"}
         </button>
       </div>
     </form>

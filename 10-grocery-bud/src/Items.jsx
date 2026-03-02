@@ -1,6 +1,6 @@
 import SingleItem from "./SingleItem";
 
-const Items = ({ items, removeItem, editItem }) => {
+const Items = ({ items, removeItem, editItem, editTask }) => {
   return (
     <div className="items">
       {items.map((item) => {
@@ -10,6 +10,7 @@ const Items = ({ items, removeItem, editItem }) => {
             item={item}
             removeItem={removeItem}
             editItem={editItem}
+            editTask={editTask}
           />
         );
       })}

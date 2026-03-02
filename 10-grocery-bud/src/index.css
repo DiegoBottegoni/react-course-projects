@@ -309,6 +309,11 @@ form h4 {
   background: var(--black);
 }
 
+.edit-btn {
+  padding: 0.15rem 0.25rem;
+  font-size: 0.75rem;
+}
+
 .Toastify__toast {
   text-transform: capitalize;
 }
